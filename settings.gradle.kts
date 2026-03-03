@@ -18,4 +18,4 @@ dependencyResolutionManagement {
 rootProject.name = "DrawBox"
 
 include(":drawbox")
-include(":sample:android", ":sample:desktop")
+//include(":sample:android", ":sample:desktop")
