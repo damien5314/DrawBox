@@ -1,7 +1,7 @@
 plugins {
-    alias(libs.plugins.compose)
+    alias(libs.plugins.composeMultiplatform)
+    alias(libs.plugins.composeCompiler)
     alias(libs.plugins.androidApplication)
-    alias(libs.plugins.kotlinAndroid)
 }
 
 group = Library.group
@@ -25,9 +25,6 @@ android {
         getByName("release") {
             isMinifyEnabled = false
         }
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
     }
 }
 

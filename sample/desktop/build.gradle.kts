@@ -2,7 +2,8 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
     kotlin("multiplatform")
-    id("org.jetbrains.compose")
+    alias(libs.plugins.composeMultiplatform)
+    alias(libs.plugins.composeCompiler)
 }
 
 group = Library.group
@@ -10,10 +11,7 @@ version = Library.version
 
 
 kotlin {
-    jvm {
-        jvmToolchain(11)
-        withJava()
-    }
+    jvm()
     sourceSets {
         val jvmMain by getting {
             dependencies {
