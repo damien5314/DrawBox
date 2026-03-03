@@ -6,10 +6,7 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.result.launch
 import androidx.compose.foundation.layout.Column
-import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
@@ -50,7 +47,7 @@ fun DrawingScreen(
         IconButton(onClick = {
             takePictureLauncher.launch()
         }) {
-            Icon(Icons.Default.Add, contentDescription = null)
+//            Icon(Icons.Default.Add, contentDescription = null)
         }
         ExpandedDrawingScreen(drawController)
     }

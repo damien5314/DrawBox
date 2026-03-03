@@ -11,8 +11,8 @@ plugins {
 //    id("convention-publication")
 }
 
-//group = Library.group
-//version = Library.version
+group = Library.group
+version = Library.version
 
 kotlin {
     androidLibrary{
@@ -26,17 +26,17 @@ kotlin {
 //        publishLibraryVariants("release")
     }
     jvm("desktop")
-//    sourceSets {
-//        commonMain.dependencies {
+    sourceSets {
+        commonMain.dependencies {
 //            api(compose.runtime)
 //            api(compose.foundation)
 
 //            implementation(libs.compose.components.resources)
-//            implementation(libs.compose.foundation)
+            implementation(libs.compose.foundation)
 //            implementation(libs.compose.material3)
-//            implementation(libs.compose.runtime)
+            implementation(libs.compose.runtime)
 //            implementation(libs.compose.ui)
 //            implementation(libs.compose.uiToolingPreview)
-//        }
-//    }
+        }
+    }
 }
