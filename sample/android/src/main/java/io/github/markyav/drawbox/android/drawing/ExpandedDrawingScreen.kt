@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -16,7 +17,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import io.github.markyav.drawbox.android.R
 import io.github.markyav.drawbox.box.DrawBox
 import io.github.markyav.drawbox.controller.DrawBoxSubscription
 import io.github.markyav.drawbox.controller.DrawController
@@ -46,13 +49,13 @@ internal fun ExpandedDrawingScreen(
                 val enableUndo by remember { derivedStateOf { drawController.undoCount.value > 0 } }
                 val enableRedo by remember { derivedStateOf { drawController.redoCount.value > 0 } }
                 IconButton(onClick = drawController::undo, enabled = enableUndo) {
-//                    Icon(imageVector = Icons.Default.ArrowBack, contentDescription = "undo")
+                    Icon(painterResource(R.drawable.arrow_back_24dp), contentDescription = "undo")
                 }
                 IconButton(onClick = drawController::redo, enabled = enableRedo) {
-//                    Icon(imageVector = Icons.Default.ArrowForward, contentDescription = "redo")
+                    Icon(painterResource(R.drawable.arrow_forward_24dp), contentDescription = "redo")
                 }
                 IconButton(onClick = drawController::reset, enabled = enableUndo || enableRedo) {
-//                    Icon(imageVector = Icons.Default.Clear, contentDescription = "reset")
+                    Icon(painterResource(R.drawable.close_24dp), contentDescription = "reset")
                 }
             }
         }

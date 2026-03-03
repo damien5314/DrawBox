@@ -6,6 +6,7 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.result.launch
 import androidx.compose.foundation.layout.Column
+import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -13,6 +14,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.res.painterResource
+import io.github.markyav.drawbox.android.R
 import io.github.markyav.drawbox.controller.DrawBoxBackground
 import io.github.markyav.drawbox.controller.DrawBoxSubscription
 import io.github.markyav.drawbox.controller.DrawController
@@ -47,7 +50,7 @@ fun DrawingScreen(
         IconButton(onClick = {
             takePictureLauncher.launch()
         }) {
-//            Icon(Icons.Default.Add, contentDescription = null)
+            Icon(painterResource(R.drawable.add_24dp), contentDescription = null)
         }
         ExpandedDrawingScreen(drawController)
     }
